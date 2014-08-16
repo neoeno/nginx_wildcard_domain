@@ -3,5 +3,6 @@ server {
 
 	location / {
 		root    /var/www/sites/$domain/dist;
+		try_files $uri $uri/ $uri.html =404;
 	}
 }
